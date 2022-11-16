@@ -1,5 +1,4 @@
-$(document).ready(()=>{
-	
+
 	var collection = [
 	   {
 		  title: "Death’s Daughter and the Ebony Blade",
@@ -8,7 +7,7 @@ $(document).ready(()=>{
 		}
 	]
 	
-	let ul = $('#post');
+	let ul = document.getElementById('post');
 	
 	for(let x = 0;x < collection.length;x++){
 		
@@ -24,11 +23,9 @@ $(document).ready(()=>{
         p.textContent = collection[x].title;
         img.src = collection[x].image;
         
-        a.append(img);
-        a.append(p);
-        li.append(a);
-        ul.append(li);
+        a.appendChild(img);
+        a.appendChild(p);
+        li.appendChild(a);
+        ul.appendChild(li);
 		
 	}
-	
-})
